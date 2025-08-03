@@ -22,6 +22,17 @@
             <div class="upload-section">
                 <h2>Загрузите данные для прогноза</h2>
                 
+                <div class="city-selector">
+                    <label for="citySelect">🏙️ Выберите город</label>
+                    <select id="citySelect" class="city-select">
+                        <option value="pyatigorsk">Пятигорск</option>
+                        <option value="kislovodsk">Кисловодск</option>
+                        <option value="essentuki">Ессентуки</option>
+                        <option value="mineralnye-vody">Минеральные Воды</option>
+                        <option value="georgievsk">Георгиевск</option>
+                    </select>
+                </div>
+                
                 <div class="file-upload">
                     <label for="salesFile">📊 Файл продаж (sales.xlsx)</label>
                     <input type="file" id="salesFile" accept=".xlsx,.xls" />
@@ -39,7 +50,7 @@
 
             <div class="loading" id="loading" style="display: none;">
                 <div class="spinner"></div>
-                <p>Анализируем данные...</p>
+                <p>Анализируем данные и получаем прогноз погоды...</p>
             </div>
 
             <div class="result-section" id="resultSection" style="display: none;">
