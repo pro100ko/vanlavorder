@@ -14,7 +14,6 @@ class VanLavOrderApp {
         const salesInput = document.getElementById('salesFile');
         const writeoffsInput = document.getElementById('writeoffsFile');
         const analyzeBtn = document.getElementById('analyzeBtn');
-        const demoBtn = document.getElementById('demoBtn');
 
         salesInput.addEventListener('change', (e) => {
             this.salesFile = e.target.files[0];
@@ -30,9 +29,6 @@ class VanLavOrderApp {
             this.analyzeData();
         });
 
-        demoBtn.addEventListener('click', () => {
-            this.runDemo();
-        });
     }
 
     updateAnalyzeButton() {
@@ -102,15 +98,6 @@ class VanLavOrderApp {
         };
     }
 
-    runDemo() {
-        this.showLoading();
-        this.hideError();
-        this.hideResult();
-
-        setTimeout(() => {
-            const demoResult = this.generateDemoResult();
-            this.showResult(demoResult);
-        }, 1500);
     }
 
     showLoading() {
