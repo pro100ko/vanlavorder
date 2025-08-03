@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VanLavOrder - Прогноз продаж</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍰 VanLavOrder</h1>
+            <p>Прогноз продаж для кондитерских</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <h2>Загрузите данные</h2>
+                
+                <div class="file-upload">
+                    <label for="salesFile">📊 Файл продаж (sales.xlsx)</label>
+                    <input type="file" id="salesFile" accept=".xlsx,.xls" />
+                </div>
+
+                <div class="file-upload">
+                    <label for="writeoffsFile">📉 Файл списаний (write-offs.xlsx)</label>
+                    <input type="file" id="writeoffsFile" accept=".xlsx,.xls" />
+                </div>
+
+                <button id="analyzeBtn" class="analyze-btn" disabled>
+                    🔮 Получить прогноз
+                </button>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Анализируем данные...</p>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>📈 Прогноз на завтра</h2>
+                <div class="weather-info" id="weatherInfo"></div>
+                <div class="forecast-list" id="forecastList"></div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <h2>❌ Ошибка</h2>
+                <p id="errorMessage"></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 VanLavOrder - Система прогнозирования продаж</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html> 
