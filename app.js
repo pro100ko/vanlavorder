@@ -3,7 +3,7 @@ class VanLavOrderApp {
         this.salesFile = null;
         this.writeoffsFile = null;
         this.selectedCity = 'pyatigorsk';
-        this.weatherApiKey = 'YOUR_OPENWEATHER_API_KEY'; // Замените на ваш API ключ
+        this.weatherApiKey = '482f7b1c95c441d98ca155908250308'; // Замените на ваш API ключ
         this.init();
     }
 
@@ -115,13 +115,13 @@ class VanLavOrderApp {
 
     getCityName(cityCode) {
         const cityNames = {
-            'pyatigorsk': 'Пятигорск',
-            'kislovodsk': 'Кисловодск',
-            'essentuki': 'Ессентуки',
-            'mineralnye-vody': 'Минеральные Воды',
-            'georgievsk': 'Георгиевск'
+            'pyatigorsk': 'Pyatigorsk',
+            'kislovodsk': 'Kislovodsk',
+            'essentuki': 'Essentuki',
+            'mineralnye-vody': 'Mineralnye Vody',
+            'georgievsk': 'Georgievsk'
         };
-        return cityNames[cityCode] || 'Пятигорск';
+        return cityNames[cityCode] || 'Pyatigorsk';
     }
 
     async processFiles(salesFile, writeoffsFile, weatherData) {
